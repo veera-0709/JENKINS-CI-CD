@@ -15,6 +15,6 @@ public class DemoApplication {
 
     @GetMapping("/api/hello")
     public String sayHello() {
-        return "Hello, Jenkins! Your Spring Boot application is running successfully.";
+        return "Hello, veera ! this is my ci cd project.";
     }
 }
