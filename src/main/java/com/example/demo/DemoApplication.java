@@ -1,20 +1,13 @@
-package com.example.demo;
+package com.example;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
-@SpringBootApplication
-@RestController
-public class DemoApplication {
+public class AppTest {
 
-    public static void main(String[] args) {
-        SpringApplication.run(DemoApplication.class, args);
-    }
-
-    @GetMapping("/api/hello")
-    public String sayHello() {
-        return "Hey ..i am veera ! this is my ci cd project.";
+    @Test
+    void testAdd() {
+        App app = new App();
+        assertEquals(5, app.add(2, 3));
     }
 }
