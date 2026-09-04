@@ -2,13 +2,12 @@ pipeline {
   agent any
 
   tools {
-    maven 'mvn-3.9.16'
+    maven 'mvn- 3.9.16'
     jdk 'JDK-21'
   }
 
-  stage {
-
-    stage ('Build') {
+  stages {
+ stage ('Build') {
       steps {
         sh 'mvn clean compile'
       }
