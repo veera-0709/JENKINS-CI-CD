@@ -30,7 +30,7 @@ pipeline {
                 sshagent(credentials: ['ubuntu-aws']) {
             sh 'echo Deploying artifact to remote server...'
             sh 'scp -o StrictHostKeyChecking=no target/jenkinsproject1-java-1.0-SNAPSHOT.jar ubuntu@13.40.104.253:/home/ubuntu/'
-            sh 'ssh -o StrictHostKeyChecking=no ubuntu@13.40.104.253 systemctl restart jenkinsproject1'
+            sh 'ssh -o StrictHostKeyChecking=no ubuntu@13.40.104.253 sudo systemctl restart jenkinsproject1'
                 }
             }
         }
